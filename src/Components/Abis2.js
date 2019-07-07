@@ -145,6 +145,7 @@ var abi = [
 	}
 ];
 
-var token2 = new web3.eth.Contract(abi ,'0xd6d66d1d383f81aafecf0978966e84f6b2ec9c34');
+var token2 = new web3.eth.Contract(abi ,'0xf08578970fcabea9835000cdf4faea228073441d');
 
 export default token2;
+

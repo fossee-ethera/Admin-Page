@@ -49,6 +49,7 @@ export class Admin extends Component {
       })
         .then(res => res.body)
         .then(response => console.log("Success:", JSON.stringify(response)))
+        .then(console.log(this.state.Company))
         .then(token2.methods.ForwardRequest(id,String(this.state.Company)).send({from:String(admin)}))
         //.then(window.location.reload())
         .catch(error => console.error("Error:", error));
