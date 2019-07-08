@@ -61,7 +61,7 @@ export class Admin extends Component {
     render() {
         return (
         <div>
-        <h1>The GREAT ADMIN Page</h1>
+        <h1>ADMIN Page</h1>
         <Item.Group divided>
             {this.state.jobs.map(job =>
                     <Segment>
@@ -79,7 +79,7 @@ export class Admin extends Component {
                     <Form method="post">
                     <Form.Group widths='equal'>
                     <Form.Input fluid label='Enter Company Address' name='Company' value={this.state.Company} placeholder='Company Address' onChange={this.logChange} required/>
-                    <Button onClick={this.handleSubmit(job.vr_id)} primary>Update Company</Button>
+                    <Button onClick={this.handleSubmit(job.vr_id)} primary>Add Validator</Button>
                     </Form.Group>
                     </Form>
                     </Segment>
