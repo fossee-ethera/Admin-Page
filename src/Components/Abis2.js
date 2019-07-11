@@ -2,9 +2,10 @@ import Portis from "@portis/web3";
 import Web3 from "web3";
 
 
-
 const portis = new Portis("9928268e-3ccb-4ac4-a8d8-3fc01ec39196", "ropsten");
+
 const web3 = new Web3(portis.provider);
+
 
 var abi = [
 	{
@@ -112,6 +113,25 @@ var abi = [
 		"constant": true,
 		"inputs": [
 			{
+				"name": "j",
+				"type": "uint256"
+			}
+		],
+		"name": "getSign",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
 				"name": "",
 				"type": "uint256"
 			}
@@ -144,7 +164,9 @@ var abi = [
 		"type": "function"
 	}
 ];
-var token2 = new web3.eth.Contract(abi ,'0xdf31087e51ddb82b3d03e26078dfb224ddb94ec7');
+var token2 = new web3.eth.Contract(abi, "0x674ffee4c12b8bdc78f4cf5bd11d4bf3e9e8625f");
+
+
 
 export default token2;
 

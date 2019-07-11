@@ -30,7 +30,7 @@ connection.connect(function(err) {
 
 app.get("/jobs", function(req, res) {
     connection.query(
-      "select vr_id,swarm_id from Validation_Requests where company_id IS NULL",
+      "select vr_id,swarm_id from Validation_Requests where company_id IS NULL or company_id=''",
       function(err, results) {
         err ? res.send(err) : res.json({ data: results });
       }
